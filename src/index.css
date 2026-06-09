@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Pacifico&display=swap");
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Playlist Script";
+  src: url("./assets/fonts/Playlist-Script.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-heading: "Libre Baskerville", Georgia, serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-script: "Playlist Script", "Pacifico", cursive;
+  /* -------------------------------------------------- */
+  /* Primitive colours from Figma */
+  /* -------------------------------------------------- */
+
+  /* Cream Color */
+  --color-cream-50: #fcf8f4;
+  --color-cream-100: #f8f1e8;
+  --color-cream-200: #f4e8da;
+  --color-cream-300: #e8d9c8;
+  --color-cream-400: #d7c4b0;
+  --color-cream-500: #c2a990;
+
+  /* Cinnamon */
+  --color-cinnamon-100: #f1e4dd;
+  --color-cinnamon-200: #dec3b5;
+  --color-cinnamon-300: #c89e89;
+  --color-cinnamon-400: #a97761;
+  --color-cinnamon-500: #8b5e4a;
+  --color-cinnamon-600: #744d3c;
+  --color-cinnamon-700: #5e3e31;
+  --color-cinnamon-800: #493026;
+
+  /* Cocoa */
+  --color-cocoa-100: #e8dfdb;
+  --color-cocoa-200: #cdbdb7;
+  --color-cocoa-300: #af978f;
+  --color-cocoa-400: #8d6e64;
+  --color-cocoa-500: #6d4c42;
+  --color-cocoa-600: #5a3e36;
+  --color-cocoa-700: #49322c;
+  --color-cocoa-800: #3b2925;
+  --color-cocoa-900: #2d201d;
+
+  /* Espresso */
+  --color-espresso-100: #d6cbc7;
+  --color-espresso-200: #b0a09a;
+  --color-espresso-300: #88736b;
+  --color-espresso-400: #5a433d;
+  --color-espresso-500: #2e201c;
+  --color-espresso-600: #251916;
+  --color-espresso-700: #1d1411;
+  --color-espresso-800: #140d0b;
+
+  /* Base */
+  --color-base-white: #ffffff;
+
+  /* -------------------------------------------------- */
+  /* Semantic colours from Figma */
+  /* -------------------------------------------------- */
+
+  /* Background */
+  --color-bg-page: var(--color-cream-200);
+  --color-bg-card: var(--color-cream-100);
+  --color-bg-subtle: var(--color-cream-300);
+  --color-bg-elevated: var(--color-base-white);
+  --color-bg-footer: var(--color-espresso-500);
+  --color-bg-inverse: var(--color-espresso-500);
+
+  /* Text */
+  --color-text-primary: var(--color-espresso-500);
+  --color-text-secondary: var(--color-cocoa-500);
+  --color-text-muted: var(--color-cocoa-300);
+  --color-text-brand: var(--color-cinnamon-500);
+  --color-text-link: var(--color-cinnamon-500);
+  --color-text-inverse: var(--color-cream-100);
+
+  /* Borders */
+  --color-border-default: var(--color-cream-400);
+  --color-border-subtle: var(--color-cream-300);
+  --color-border-strong: var(--color-cocoa-300);
+  --color-border-focus: var(--color-cinnamon-500);
+  --color-border-inverse: var(--color-cream-100);
+
+  /* Icons */
+  --color-icon-default: var(--color-cocoa-500);
+  --color-icon-muted: var(--color-cocoa-300);
+  --color-icon-brand: var(--color-cinnamon-500);
+  --color-icon-inverse: var(--color-cream-100);
+
+  /* Primary action */
+  --color-action-primary: var(--color-cinnamon-600);
+  --color-action-primary-hover: var(--color-cocoa-500);
+  --color-action-primary-pressed: var(--color-cinnamon-700);
+  --color-action-primary-disabled: var(--color-cocoa-200);
+  --color-action-primary-text: var(--color-cream-100);
+
+  /* Secondary action */
+  --color-action-secondary: var(--color-cream-400);
+  --color-action-secondary-hover: var(--color-cocoa-400);
+  --color-action-secondary-border: var(--color-cream-500);
+  --color-action-secondary-text: var(--color-espresso-500);
+
+  /* Accent action */
+  --color-action-accent: var(--color-cinnamon-500);
+  --color-action-accent-hover: var(--color-cinnamon-400);
+  --color-action-accent-text: var(--color-cream-100);
+
+  /* Outline action */
+  --color-action-outline: var(--color-cream-50);
+  --color-action-outline-hover: var(--color-cocoa-400);
+  --color-action-outline-border: var(--color-cocoa-400);
+  --color-action-outline-text: var(--color-cocoa-700);
+}
+
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  h6 {
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 1.2;
+  }
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+
+

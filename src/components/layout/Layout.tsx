@@ -1,0 +1,22 @@
+import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import { Footer } from "./Footer";
+import { OrderProvider } from "../../context/OrderContext";
+import { OrderSidebar } from "../order/OrderSidebar";
+
+export default function Layout() {
+  return (
+    <OrderProvider>
+      <div className="flex min-h-dvh flex-col bg-bg-page text-text-primary">
+        <Header />
+
+        <main className="flex-1">
+          <Outlet />
+        </main>
+
+        <Footer />
+        <OrderSidebar />
+      </div>
+    </OrderProvider>
+  );
+}

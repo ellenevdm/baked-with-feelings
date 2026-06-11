@@ -11,7 +11,6 @@ import {
   BUSINESS_EMAIL,
   BUSINESS_LOCATION,
   BUSINESS_WHATSAPP_DISPLAY,
-  buildMailtoLink,
   buildWhatsappLink,
 } from "../data/contact";
 import { SOCIAL_LINKS } from "../data/links";
@@ -98,10 +97,6 @@ export default function ContactPage() {
   const [error, setError] = useState("");
 
   const emailBody = buildContactMessage(formDetails);
-  const fallbackEmailHref = buildMailtoLink(
-    formDetails.topic || "Website enquiry from Baked with Feelings",
-    emailBody,
-  );
 
   function updateField(field: keyof ContactFormDetails, value: string) {
     setFormDetails((currentDetails) => ({
@@ -267,22 +262,14 @@ export default function ContactPage() {
 
           {(formStatus === "fallback" || formStatus === "failed") && (
             <p className="rounded-lg bg-cinnamon-100 p-3 text-sm leading-6 text-text-primary">
-              The email service did not confirm delivery. Use the backup email
-              link below.
+              The email service did not confirm delivery. Please use WhatsApp
+              above for a quick message, or email {BUSINESS_EMAIL} directly.
             </p>
           )}
 
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Button type="submit" className="px-5 py-3">
-              {formStatus === "sending" ? "Sending..." : "Send Message"}
-            </Button>
-            <a
-              href={fallbackEmailHref}
-              className="inline-flex items-center justify-center rounded-lg border border-border-default bg-bg-elevated px-5 py-3 text-sm font-semibold text-text-primary transition hover:border-border-focus hover:text-text-brand"
-            >
-              Email Backup
-            </a>
-          </div>
+          <Button type="submit" className="px-5 py-3">
+            {formStatus === "sending" ? "Sending..." : "Send Message"}
+          </Button>
         </form>
 
         <aside className="space-y-4">

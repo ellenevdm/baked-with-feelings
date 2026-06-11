@@ -114,13 +114,13 @@ function ProductModalContent({
         className="max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-t-lg border border-border-subtle bg-bg-card shadow-2xl sm:rounded-lg"
         onMouseDown={(event) => event.stopPropagation()}
       >
-        <div className="grid gap-0 md:grid-cols-[0.95fr_1.05fr]">
-          <div className="relative min-h-[260px] bg-bg-subtle md:min-h-full">
+        <div className="flex flex-col">
+          <div className="relative aspect-[16/9] max-h-[420px] min-h-[240px] overflow-hidden bg-bg-subtle">
             {product.image ? (
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-full min-h-[260px] w-full object-cover"
+                className="h-full w-full object-cover"
               />
             ) : (
               <ProductIllustration product={product} />

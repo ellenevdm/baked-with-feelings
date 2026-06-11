@@ -5,8 +5,7 @@ export type ProductCategory =
   | "comfort-bakes"
   | "desserts"
   | "tarts"
-  | "pet-treats"
-  | "pet-cakes"
+  | "pet-bakes"
   | "extras";
 
 export type ProductStatus = "active" | "coming-soon" | "hidden";
@@ -263,11 +262,11 @@ export const products: Product[] = [
     ],
     recipeCost: 76.14,
     pricingNotes:
-      "Coming soon until brownie square size and final yield are confirmed.",
+      "Priced for small-batch homemade brownie boxes. Final piece sizes may vary slightly.",
     storage:
       "Store in an airtight container at room temperature for up to 4 days.",
     leadTime: "2 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -301,11 +300,11 @@ export const products: Product[] = [
     ],
     recipeCost: 74.67,
     pricingNotes:
-      "Coming soon until piece size and final yield are confirmed.",
+      "Priced for small-batch fudge boxes. Piece sizes may vary slightly.",
     storage:
       "Store in an airtight container at room temperature for up to 2 weeks.",
     leadTime: "2 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -340,11 +339,11 @@ export const products: Product[] = [
     ],
     recipeCost: 43.31,
     pricingNotes:
-      "Coming soon. Recipe cost is low, but fresh-bake effort and packaging still matter.",
+      "Priced for fresh small-batch scones, including bake time and packaging.",
     storage:
       "Best eaten the same day. Store in an airtight container and refresh in the oven if needed.",
     leadTime: "1–2 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -379,11 +378,11 @@ export const products: Product[] = [
     ],
     recipeCost: 66.7,
     pricingNotes:
-      "Coming soon. Tray sizes still need testing before selling.",
+      "Priced for small-batch pudding trays. Tray portions may vary slightly.",
     storage:
       "Refrigerate. Reheat gently. Best within 3 days.",
     leadTime: "2–3 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -411,11 +410,11 @@ export const products: Product[] = [
     ],
     recipeCost: 129.55,
     pricingNotes:
-      "Coming soon. Recipe cost is higher, so this needs proper testing before final pricing.",
+      "Priced as a whole tart because the recipe uses a full homemade base and filling.",
     storage:
       "Refrigerate. Best within 3 days.",
     leadTime: "2–3 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -450,11 +449,11 @@ export const products: Product[] = [
     ],
     recipeCost: 119.24,
     pricingNotes:
-      "Coming soon. Takes more time and effort, so do not underprice this gremlin.",
+      "Priced to account for the extra rising time, filling, glaze, and hands-on work.",
     storage:
       "Room temperature in an airtight container for 2 days. Warm slightly before eating.",
     leadTime: "3 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -463,7 +462,7 @@ export const products: Product[] = [
     recipeId: "LIVER-BITES",
     name: "Liver Training Treats",
     audience: "pet",
-    category: "pet-treats",
+    category: "pet-bakes",
     shortDescription:
       "Homemade liver training treats for dogs who know exactly how cute they are.",
     description:
@@ -501,7 +500,7 @@ export const products: Product[] = [
     recipeId: "PUP-CAKE",
     name: "Pup Cake Classic",
     audience: "pet",
-    category: "pet-cakes",
+    category: "pet-bakes",
     shortDescription:
       "A dog-friendly celebration cake for very important dogs.",
     description:
@@ -520,11 +519,11 @@ export const products: Product[] = [
     ],
     recipeCost: 77.22,
     pricingNotes:
-      "Coming soon. Needs final recipe testing and portion confirmation.",
+      "Priced as a small dog-friendly celebration cake made to order.",
     storage:
       "Refrigerate. Use within 2 days.",
     leadTime: "3 days notice",
-    status: "coming-soon",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -533,7 +532,7 @@ export const products: Product[] = [
     recipeId: "PUP-CAKE-SAV",
     name: "Pup Cake Savoury",
     audience: "pet",
-    category: "pet-cakes",
+    category: "pet-bakes",
     shortDescription:
       "A savoury dog-friendly celebration cake.",
     description:
@@ -552,11 +551,11 @@ export const products: Product[] = [
     ],
     recipeCost: 241.24,
     pricingNotes:
-      "Hidden for now. Recipe cost is very high, so this needs reworking before selling.",
+      "Priced as a savoury dog-friendly celebration cake with higher ingredient costs.",
     storage:
       "Refrigerate. Use within 2 days.",
     leadTime: "3 days notice",
-    status: "hidden",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -584,11 +583,11 @@ export const products: Product[] = [
     ],
     recipeCost: 298.84,
     pricingNotes:
-      "Hidden for now. Current recipe cost is too high for the likely selling price.",
+      "Priced as a whole tart with a higher-cost lemon filling and meringue topping.",
     storage:
       "Refrigerate. Best within 2 days.",
     leadTime: "3–4 days notice",
-    status: "hidden",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -616,11 +615,11 @@ export const products: Product[] = [
     ],
     recipeCost: 94.7,
     pricingNotes:
-      "Hidden for now. Same-day products add admin pressure.",
+      "Priced for fresh-fried, same-day donut boxes.",
     storage:
       "Same-day only. Best eaten warm.",
     leadTime: "24h pre-order required",
-    status: "hidden",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -648,11 +647,11 @@ export const products: Product[] = [
     ],
     recipeCost: 65.89,
     pricingNotes:
-      "Hidden for now until final yield and decoration effort are known.",
+      "Priced for baked mini donut boxes with small-batch finishing time included.",
     storage:
       "Best eaten fresh. Store airtight at room temperature.",
     leadTime: "2 days notice",
-    status: "hidden",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -680,11 +679,11 @@ export const products: Product[] = [
     ],
     recipeCost: 13.31,
     pricingNotes:
-      "Hidden for now. Best used as an add-on later.",
+      "Priced as an add-on for selected puddings and comfort bakes.",
     storage:
       "Refrigerate immediately. Use within 4 days.",
     leadTime: "2 days notice",
-    status: "hidden",
+    status: "active",
     featured: false,
     image: null,
   },
@@ -696,6 +695,6 @@ export const categories = [
   { id: "comfort-bakes", label: "Comfort Bakes" },
   { id: "desserts", label: "Desserts" },
   { id: "tarts", label: "Tarts" },
-  { id: "pet-treats", label: "Pet Treats" },
-  { id: "pet-cakes", label: "Pet Cakes" },
+  { id: "pet-bakes", label: "Pet Bakes" },
+  { id: "extras", label: "Extras" },
 ];

@@ -154,7 +154,7 @@ export default function HomePage() {
               <div className="shrink-0 md:border-l md:border-border-subtle md:pl-8">
                 <NavLink to="/menu" className="block">
                   <Button className="w-full px-8 py-3 text-base md:w-auto">
-                    See Pet Treats
+                    See Pet Bakes
                   </Button>
                 </NavLink>
               </div>

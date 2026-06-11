@@ -29,12 +29,12 @@ export function Footer() {
             />
 
             <p
-              className="font-script text-base opacity-80 sm:text-lg"
+              className="font-script text-base text-text-inverse/90 sm:text-lg"
             >
               Homemade Just Hits Different
             </p>
 
-            <p className="max-w-sm text-sm leading-relaxed opacity-80">
+            <p className="max-w-sm text-sm leading-relaxed text-text-inverse/90">
               Comfort bakes for people. Feel good treats for pets. Freshly baked
               for you.
             </p>
@@ -50,7 +50,7 @@ export function Footer() {
                 <NavLink
                   key={link.href}
                   to={link.href}
-                  className="py-1.5 text-sm opacity-70 transition-opacity hover:opacity-100"
+                  className="py-1.5 text-sm text-text-inverse/85 transition hover:text-text-inverse"
                 >
                   {link.label}
                 </NavLink>
@@ -70,7 +70,7 @@ export function Footer() {
                   className="group flex items-center gap-3 py-1.5"
                 >
                   {returnIcon(icon)}
-                  <span className="text-sm opacity-70 transition-opacity group-hover:opacity-100">
+                  <span className="text-sm text-text-inverse/85 transition group-hover:text-text-inverse">
                     {handle}
                   </span>
                 </a>
@@ -80,11 +80,11 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-border-inverse/10 py-5 text-center sm:flex-row sm:text-left">
-          <p className="text-xs opacity-40">
+          <p className="text-xs text-text-inverse/75">
             © {new Date().getFullYear()} Baked With Feelings. All rights
             reserved.
           </p>
-          <p className="flex items-center justify-center gap-1 text-xs opacity-40 sm:justify-end">
+          <p className="flex items-center justify-center gap-1 text-xs text-text-inverse/75 sm:justify-end">
             Made with{" "}
             <FaHeart size={10} className="inline mx-0.5" fill="currentColor" />{" "}
             and real butter.

@@ -41,11 +41,6 @@ export function ProductCard({ product, onViewOptions }: ProductCardProps) {
             </span>
           )}
 
-          {product.status === "coming-soon" && (
-            <span className="rounded-full bg-cinnamon-100 px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-cinnamon-700">
-              Coming Soon
-            </span>
-          )}
         </div>
       </div>
 
@@ -74,10 +69,9 @@ export function ProductCard({ product, onViewOptions }: ProductCardProps) {
           <Button
             type="button"
             onClick={() => onViewOptions(product)}
-            disabled={product.status !== "active"}
             className="w-full px-5 py-3"
           >
-            {product.status === "active" ? "View Options" : "Coming Soon"}
+            View Options
           </Button>
         </div>
       </div>

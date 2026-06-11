@@ -74,23 +74,23 @@
 
   /* Text */
   --color-text-primary: var(--color-espresso-500);
-  --color-text-secondary: var(--color-cocoa-500);
-  --color-text-muted: var(--color-cocoa-300);
-  --color-text-brand: var(--color-cinnamon-500);
-  --color-text-link: var(--color-cinnamon-500);
+  --color-text-secondary: var(--color-cocoa-600);
+  --color-text-muted: var(--color-cocoa-500);
+  --color-text-brand: var(--color-cinnamon-600);
+  --color-text-link: var(--color-cinnamon-600);
   --color-text-inverse: var(--color-cream-100);
 
   /* Borders */
   --color-border-default: var(--color-cream-400);
   --color-border-subtle: var(--color-cream-300);
   --color-border-strong: var(--color-cocoa-300);
-  --color-border-focus: var(--color-cinnamon-500);
+  --color-border-focus: var(--color-cinnamon-600);
   --color-border-inverse: var(--color-cream-100);
 
   /* Icons */
   --color-icon-default: var(--color-cocoa-500);
-  --color-icon-muted: var(--color-cocoa-300);
-  --color-icon-brand: var(--color-cinnamon-500);
+  --color-icon-muted: var(--color-cocoa-500);
+  --color-icon-brand: var(--color-cinnamon-600);
   --color-icon-inverse: var(--color-cream-100);
 
   /* Primary action */
@@ -107,13 +107,13 @@
   --color-action-secondary-text: var(--color-espresso-500);
 
   /* Accent action */
-  --color-action-accent: var(--color-cinnamon-500);
-  --color-action-accent-hover: var(--color-cinnamon-400);
+  --color-action-accent: var(--color-cinnamon-600);
+  --color-action-accent-hover: var(--color-cinnamon-700);
   --color-action-accent-text: var(--color-cream-100);
 
   /* Outline action */
   --color-action-outline: var(--color-cream-50);
-  --color-action-outline-hover: var(--color-cocoa-400);
+  --color-action-outline-hover: var(--color-cinnamon-600);
   --color-action-outline-border: var(--color-cocoa-400);
   --color-action-outline-text: var(--color-cocoa-700);
 }
@@ -192,5 +192,4 @@
     text-decoration: none;
   }
 }
-
 

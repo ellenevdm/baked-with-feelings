@@ -21,11 +21,11 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "border border-action-primary bg-action-primary text-action-primary-text hover:bg-action-primary-hover active:bg-action-primary-pressed disabled:bg-action-primary-disabled",
+    "border border-action-primary bg-action-primary text-action-primary-text shadow-sm hover:-translate-y-0.5 hover:bg-action-primary-hover hover:shadow-md active:translate-y-0 active:bg-action-primary-pressed active:shadow-sm disabled:bg-action-primary-disabled",
   secondary:
-    "border border-action-secondary-border bg-action-secondary text-action-secondary-text hover:bg-action-secondary-hover hover:text-action-primary-text",
+    "border border-action-secondary-border bg-action-secondary text-action-secondary-text shadow-sm hover:-translate-y-0.5 hover:bg-action-secondary-hover hover:shadow-md active:translate-y-0 active:bg-cinnamon-200 active:shadow-sm",
   outline:
-    "border border-action-outline-border bg-action-outline text-action-outline-text hover:bg-action-outline-hover hover:text-text-inverse",
+    "border border-action-outline-border bg-action-outline text-action-outline-text shadow-sm hover:-translate-y-0.5 hover:border-action-outline-hover hover:bg-action-outline-hover hover:text-text-inverse hover:shadow-md active:translate-y-0 active:shadow-sm",
   ghost:
     "bg-transparent text-text-primary hover:bg-cream-300/60 active:bg-cream-400/60",
   icon: "bg-transparent text-icon-default hover:bg-cream-300/60 active:bg-cream-400/60",
@@ -69,12 +69,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type={type}
         className={cn(
-          "inline-flex items-center justify-center font-medium transition-colors",
+          "inline-flex items-center justify-center font-semibold transition",
           "rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus",
           "disabled:cursor-not-allowed disabled:opacity-50",
           isIconOnly
             ? "size-10 rounded-full p-0"
-            : "gap-2 px-5 py-2.5 text-sm",
+            : "min-h-11 gap-2 px-5 py-2.5 text-sm",
           variantStyles[variant],
           className,
         )}

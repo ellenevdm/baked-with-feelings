@@ -11,38 +11,85 @@ const PET_TREATS = [
   "Cat treats",
 ] as const;
 
+const HERO_IMAGES = [
+  {
+    alt: "Cookie outline",
+    className: "left-4 top-10 w-28 rotate-[-10deg] opacity-25 sm:w-36 lg:w-44",
+    src: "/category-images/cookie.png",
+  },
+  {
+    alt: "Dessert outline",
+    className: "right-3 top-16 w-28 rotate-[9deg] opacity-25 sm:w-36 lg:w-44",
+    src: "/category-images/dessert.png",
+  },
+  {
+    alt: "Tart outline",
+    className:
+      "bottom-8 left-1/2 hidden w-32 -translate-x-1/2 opacity-20 md:block lg:w-44",
+    src: "/category-images/tart.png",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <div>
-      <section className="px-4 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl text-center">
-          <div className="mx-auto max-w-3xl">
-            <div className="mb-8 flex flex-col gap-4">
-              <span className="text-xs font-semibold uppercase tracking-widest text-text-brand">
-                FRESHLY BAKED TREATS
-              </span>
-              <h1 className="font-heading text-5xl font-bold leading-tight text-text-primary md:text-7xl">
-                Baked with Feelings
-              </h1>
+      <section className="relative isolate overflow-hidden border-b border-border-subtle bg-bg-card px-4 py-20 sm:py-24 lg:py-28">
+        {HERO_IMAGES.map((image) => (
+          <img
+            key={image.src}
+            src={image.src}
+            alt=""
+            aria-hidden
+            className={`pointer-events-none absolute select-none ${image.className}`}
+          />
+        ))}
 
-              <p className="font-script text-2xl text-text-brand md:text-4xl">
-                Homemade Just Hits Different
-              </p>
+        <div className="relative mx-auto max-w-6xl text-center">
+          <div className="mx-auto max-w-4xl">
+            <span className="inline-flex rounded-full border border-border-default bg-bg-elevated px-4 py-2 text-xs font-semibold uppercase tracking-widest text-text-brand shadow-sm">
+              Freshly baked comfort treats
+            </span>
 
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-text-secondary md:text-xl">
-                Comfort baked goods made from scratch with real butter, real
-                sugar, and real love. No fancy cakes. No trendy health desserts.
-                Just homemade treats that feel like a warm hug.
-              </p>
-            </div>
+            <h1 className="mt-6 font-heading text-5xl font-bold leading-[1.05] text-text-primary sm:text-6xl md:text-7xl">
+              Baked with Feelings
+            </h1>
 
-            <div className="flex flex-col justify-center gap-3 sm:flex-row">
+            <p className="mt-4 font-script text-3xl leading-tight text-text-brand md:text-5xl">
+              Homemade just hits different.
+            </p>
+
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg md:text-xl">
+              Small-batch bakes made with real butter, real sugar, and real
+              comfort. No trendy health desserts. Just homemade treats that feel
+              familiar, warm, and worth ordering.
+            </p>
+
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <NavLink to="/menu">
-                <Button>See the Menu</Button>
+                <Button className="w-full px-7 py-3 text-base sm:w-auto">
+                  See the Menu
+                </Button>
               </NavLink>
               <NavLink to="/about">
-                <Button variant="outline">Our Story</Button>
+                <Button
+                  variant="secondary"
+                  className="w-full px-7 py-3 text-base sm:w-auto"
+                >
+                  Our Story
+                </Button>
               </NavLink>
+            </div>
+
+            <div className="mx-auto mt-8 flex max-w-2xl flex-col gap-2 text-sm font-semibold text-text-primary sm:grid sm:grid-cols-3">
+              <p className="rounded-lg border border-border-subtle bg-bg-elevated/80 px-4 py-3 shadow-sm">
+                Small-batch
+              </p>
+              <p className="rounded-lg border border-border-subtle bg-bg-elevated/80 px-4 py-3 shadow-sm">
+                Made to order
+              </p>
+              <p className="rounded-lg border border-border-subtle bg-bg-elevated/80 px-4 py-3 shadow-sm">
+                Collection only
+              </p>
             </div>
           </div>
         </div>

@@ -215,7 +215,7 @@ export function OrderForm() {
 
           <a
             href={emailHref}
-            className="inline-flex w-full items-center justify-center rounded-lg border border-border-default bg-bg-card px-5 py-3 text-sm font-semibold text-text-primary transition hover:border-border-focus hover:text-text-brand"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-lg border border-action-secondary-border bg-action-secondary px-5 py-3 text-sm font-semibold text-action-secondary-text shadow-sm transition hover:-translate-y-0.5 hover:bg-action-secondary-hover hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus active:translate-y-0 active:bg-cinnamon-200 active:shadow-sm"
           >
             Email order copy
           </a>

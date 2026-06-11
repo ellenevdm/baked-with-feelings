@@ -94,17 +94,17 @@
   --color-icon-inverse: var(--color-cream-100);
 
   /* Primary action */
-  --color-action-primary: var(--color-cinnamon-600);
-  --color-action-primary-hover: var(--color-cocoa-500);
-  --color-action-primary-pressed: var(--color-cinnamon-700);
+  --color-action-primary: var(--color-cinnamon-700);
+  --color-action-primary-hover: var(--color-cinnamon-800);
+  --color-action-primary-pressed: var(--color-espresso-500);
   --color-action-primary-disabled: var(--color-cocoa-200);
   --color-action-primary-text: var(--color-cream-100);
 
   /* Secondary action */
-  --color-action-secondary: var(--color-cream-400);
-  --color-action-secondary-hover: var(--color-cocoa-400);
-  --color-action-secondary-border: var(--color-cream-500);
-  --color-action-secondary-text: var(--color-espresso-500);
+  --color-action-secondary: var(--color-cinnamon-100);
+  --color-action-secondary-hover: var(--color-cream-50);
+  --color-action-secondary-border: var(--color-cinnamon-600);
+  --color-action-secondary-text: var(--color-cinnamon-700);
 
   /* Accent action */
   --color-action-accent: var(--color-cinnamon-600);
@@ -192,4 +192,3 @@
     text-decoration: none;
   }
 }
-

@@ -1,0 +1,23 @@
+name: Deploy to Coolify
+
+on:
+  push:
+    branches:
+      - main
+      - test
+
+jobs:
+  sync-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync deploy mirror
+        env:
+          MIRROR_TOKEN: ${{ secrets.COOLIFY_MIRROR_TOKEN }}
+        run: |
+          git clone --depth 1 --branch "${GITHUB_REF_NAME}" \
+            "https://x-access-token:${MIRROR_TOKEN}@github.com/GitBrendonvdm/baked-with-feelings.git" mirror
+          cd mirror
+          git remote add source "https://x-access-token:${MIRROR_TOKEN}@github.com/ellenevdm/baked-with-feelings.git"
+          git fetch source "${GITHUB_REF_NAME}"
+          git reset --hard "source/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}" --force

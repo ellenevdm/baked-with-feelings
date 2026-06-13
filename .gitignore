@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local Coolify API payloads and deploy keys
+.coolify-*
+.coolify-deploy-key
+.coolify-deploy-key.pub

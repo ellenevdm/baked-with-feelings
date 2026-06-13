@@ -1,15 +1,34 @@
 # Deployment (Coolify)
 
-## DNS
+## DNS (required for HTTPS)
 
-Point these A records at your DNS provider to the VPS IP **102.211.205.157**:
+The domain currently uses **Afrihost parking DNS** (`parking1.zadns.co.za`) and points to the wrong server. Let's Encrypt cannot sign certificates until this is fixed.
+
+| Check | Current | Required |
+|-------|---------|----------|
+| `bakedwithfeelings.co.za` | `102.214.8.148` (parking) | `102.211.205.157` |
+| `test.bakedwithfeelings.co.za` | does not exist | `102.211.205.157` |
+
+At your Afrihost / domain control panel, remove parking records and add:
 
 | Host | Type | Value |
 |------|------|-------|
 | `@` (apex) | A | `102.211.205.157` |
 | `test` | A | `102.211.205.157` |
 
-Coolify issues Let's Encrypt certificates once DNS resolves. Until then, the apps are live on the VPS but custom domains will not reach Coolify.
+After DNS propagates (usually 5–30 minutes), Coolify Traefik will automatically request Let's Encrypt certificates. Force HTTPS is already enabled on both apps.
+
+To retry manually: restart the proxy on the VPS (`docker restart coolify-proxy`) once DNS resolves correctly.
+
+## HTTPS / SSL
+
+Coolify uses Traefik + Let's Encrypt (HTTP challenge on port 80). Certificates are requested automatically when:
+
+1. DNS points to `102.211.205.157`
+2. Port 80 is reachable from the internet
+3. No other host answers the ACME challenge for that domain
+
+If cert issuance fails, check Traefik logs: `docker logs coolify-proxy | grep bakedwithfeelings`
 
 ## Environments
 

@@ -6,138 +6,215 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Baked with Feelings"
         title="Homemade just hits different."
-      >
-        <div className="space-y-5 rounded-lg border border-border-subtle bg-bg-card p-6 text-base leading-7 text-text-secondary shadow-sm md:p-8">
-          <p>
-            Baked with Feelings is a small home bakery built around comfort
-            food, real ingredients, and the kind of bakes that make you pause
-            for a second and go, “Okay wait, that’s actually really good.”
-          </p>
-          <p>
-            This is not a low-calorie, sugar-free, protein-powder-in-disguise
-            situation.
-          </p>
-          <div className="grid gap-3 text-text-primary sm:grid-cols-3">
-            <p className="rounded-lg bg-bg-elevated p-4 font-heading text-xl">
-              Real butter.
-            </p>
-            <p className="rounded-lg bg-bg-elevated p-4 font-heading text-xl">
-              Real sugar.
-            </p>
-            <p className="rounded-lg bg-bg-elevated p-4 font-heading text-xl">
-              Real comfort.
-            </p>
-          </div>
-          <p>
-            Real homemade bakes made by a real person in a very real kitchen
-            that probably used too many bowls.
-          </p>
-        </div>
-      </PageHeader>
+      />
+
+      
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div className="space-y-12">
+        <section className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-sm font-medium text-text-primary shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+          <p className="text-center text-lg leading-8 text-text-primary">
+            Baked with Feelings exists to share fresh, homemade comfort food
+            that tastes like <em>home</em>, <em>nostalgia</em>, and{" "}
+            <em>warmth</em>.
+          </p>
+          <p className="mt-4 text-center text-base text-text-secondary">
+            Not factory-perfect. Not soulless. Just real baking made with care,
+            quality ingredients, and whatever feelings I'm carrying that day.
+          </p>
+        </div>
+      </section>
+
           <AboutSection title="The story behind it">
             <p>
-              Baked with Feelings started because baking became one of the few
-              things that made sense when life felt heavy.
+              I've struggled with mental health for most of my life. There were
+              two serious dips where I could barely function. While everyone
+              suggested exercise, meditation, or hobbies, I found something else
+              entirely: baking.
             </p>
             <p>
-              There is something grounding about measuring ingredients, mixing
-              dough, waiting for the oven timer, and creating something that can
-              make someone else’s day a little softer. It is practical, messy,
-              comforting, and occasionally chaotic; which honestly feels very
-              on-brand.
+              Baking became my outlet—the one thing that made me feel capable,
+              proud, and genuinely better. As a child, I baked with my mom. Our
+              chocolate birthday cake never looked pretty, but that was never
+              the point. I learned early that what's inside—the care, the real
+              ingredients, the intention—matters infinitely more than what's on
+              the surface.
             </p>
             <p>
-              This business is about turning that comfort into something
-              shareable.
+              When life got heavy, I created. I'd spend time tempering butter,
+              weighing ingredients, waiting. That deliberate slowness
+              transformed my anxiety into something I could taste—something
+              real. My favorite moments were watching my husband's face as he
+              bit into a cookie, or catching my own reflection in the oven glass
+              doing a little happy dance because it actually tasted{" "}
+              <em>that</em> good.
             </p>
             <p>
-              Not perfect factory bakes. Not polished, soulless desserts. Just
-              homemade food with warmth, personality, and a bit of emotional
-              support energy.
-            </p>
-          </AboutSection>
-
-          <AboutSection title="What I make">
-            <p>
-              Baked with Feelings focuses on comforting homemade bakes like
-              cookies, brownies, crunchies, puddings, tarts, and other
-              feel-good treats.
-            </p>
-            <p>
-              The first launch menu is intentionally small, because I would
-              rather make a few things properly than pretend I am a full bakery
-              machine running on caffeine and denial.
-            </p>
-            <p>You can expect things like:</p>
-            <AboutList
-              items={[
-                "soft cinnamon-sugar cookies",
-                "peanut butter oatmeal cookies",
-                "chocolate chip cookies",
-                "buttery shortbread",
-                "oatmeal crunchies",
-                "rich comfort bakes",
-                "homemade dog treats",
-              ]}
-            />
-            <p>More products will be added as recipes are tested properly.</p>
-          </AboutSection>
-
-          <AboutSection title="For humans and pets">
-            <p>
-              Baked with Feelings is for people who want proper homemade treats,
-              but it is also for the pets who run the house and pretend they
-              don’t.
-            </p>
-            <p>
-              The pet range is made for dogs and cats using pet-safe recipe
-              ideas, with clear ingredient information listed where needed.
-              Because pets are family, and honestly, some of them have better
-              manners than people.
+              After leaving a stressful job to prioritize my mental health, I
+              realized I had a solution staring at me: the one thing that never
+              hurt me was baking. So why not share it? Baked with Feelings
+              started because I could no longer keep all this to myself, and
+              because I wanted to turn that comfort into something others could
+              taste.
             </p>
           </AboutSection>
 
-          <AboutSection title="What you can expect">
-            <p>Everything is made in small homemade batches.</p>
+          <AboutSection title="What We Believe In">
+            <div className="grid gap-6 sm:grid-cols-3">
+              <div className="rounded-lg border border-border-subtle bg-bg-card p-6">
+                <h3 className="mb-3 font-heading text-lg font-bold text-text-primary">
+                  Quality Over Perfection
+                </h3>
+                <p className="text-sm leading-6 text-text-secondary">
+                  Real butter, not shortcuts. Intentional ingredients, not
+                  impulse baking. Homemade is messy, imperfect, and that's
+                  exactly the point. You can taste the difference.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-border-subtle bg-bg-card p-6">
+                <h3 className="mb-3 font-heading text-lg font-bold text-text-primary">
+                  Feelings Into Creation
+                </h3>
+                <p className="text-sm leading-6 text-text-secondary">
+                  Every batch carries intention. Frustration, joy, nostalgia,
+                  mindfulness—all of it goes in. When life gets heavy, I create
+                  a heavy batch with those feelings. That's what makes it real.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-border-subtle bg-bg-card p-6">
+                <h3 className="mb-3 font-heading text-lg font-bold text-text-primary">
+                  Small Batch, Big Care
+                </h3>
+                <p className="text-sm leading-6 text-text-secondary">
+                  We're not trying to be the biggest bakery. We're trying to be
+                  the one where you can taste the difference, where each batch
+                  was made with care and soul.
+                </p>
+              </div>
+            </div>
+          </AboutSection>
+
+          <AboutSection title="What I Make">
             <p>
-              That means bakes may not look identical every time, and portion
-              sizes can vary slightly. That is part of handmade baking. No
-              factory-perfect clones here; just proper comfort food made with
-              care.
+              Baked with Feelings focuses on comforting homemade bakes made with
+              real ingredients and real time. Fresh donuts and cinnamon rolls.
+              Lemon meringue tarts. Thick, wobbly milk tarts that taste like
+              home. Cinnamon snickerdoodles. Cookies that taste like they were
+              made by someone who actually cared.
+            </p>
+            <p>
+              The launch menu is intentionally small, because I would rather
+              make a few things properly than pretend I'm a full bakery running
+              on caffeine and denial.
             </p>
             <p>You can expect:</p>
             <AboutList
               items={[
-                "clear product details",
-                "ingredient and allergen information",
-                "honest lead times",
-                "no custom “make it healthy” recipe changes",
-                "no pretending butter is the villain",
-                "small-batch homemade bakes with personality",
+                "Cinnamon snickerdoodles",
+                "Soft peanut butter oatmeal cookies",
+                "Rich chocolate chip cookies",
+                "Buttery shortbread",
+                "Oatmeal crunchies",
+                "Lemon meringue tarts",
+                "South African milk tarts (thick & wobbly)",
+                "Fresh cinnamon rolls",
+                "Warm homemade donuts",
               ]}
             />
-            <p className="rounded-lg border-l-4 border-border-focus bg-bg-card p-5 text-text-primary shadow-sm">
-              Please note that products are made in a home kitchen that handles
-              common allergens such as gluten, dairy, eggs, peanuts, oats, and
-              other ingredients. If you have a severe allergy, please read the
-              product information carefully before ordering.
+            <p className="mt-4 text-sm text-text-secondary italic">
+              More products will be added as recipes are tested properly. No
+              rushing. No shortcuts.
             </p>
           </AboutSection>
 
-          <AboutSection title="A small note from me">
-            <p>Baked with Feelings is exactly what the name says.</p>
+          <AboutSection title="For Our Four-Legged Family">
             <p>
-              Some things are baked for joy. Some things are baked for comfort.
-              Some things are baked because the day was terrible and sugar
-              understood the assignment.
+              Baked with Feelings is also for the pets who run the house. I have
+              four fur babies: Luna (7-year-old Pomeranian), Lily (1-year-old
+              pitbull), Mr. Grey, and Tabs (3-year-old cats).
             </p>
             <p>
-              Whatever the reason, I hope these bakes feel like something
-              familiar, warm, and worth treating yourself to.
+              I started baking treats for Luna as a puppy—healthy, gut-friendly
+              chicken liver treats for her sensitive stomach. What began as a
+              solution became a joy, especially when we added Lily and needed
+              treats for training. Now they're part of the Baked with Feelings
+              collection.
             </p>
+            <p>
+              Because we're animal lovers, we make pet treats with the same care
+              and intention as everything else here: quality ingredients, no
+              shortcuts, nothing but what's good for their guts and their
+              happiness. Mr. Grey and Tabs (our pickiest eaters) even approve.
+              We're still developing more options because they deserve the same
+              love.
+            </p>
+            <p>
+              <strong>
+                Your fur babies deserve baking made with feelings too.
+              </strong>
+            </p>
+            <p className="mt-4 text-sm text-text-secondary italic">
+              Pet treats are made with pet-safe ingredients, no dairy, and with
+              the understanding that a healthy pet is a happy pet.
+            </p>
+          </AboutSection>
+
+          <AboutSection title="What You Can Expect">
+            <p>
+              Everything is made in small homemade batches, which means
+              something beautiful and honest: bakes may not look identical every
+              time, and portion sizes can vary slightly. That's not a flaw.
+              That's homemade.
+            </p>
+            <p>
+              No factory-perfect clones here. Just proper comfort food made with
+              care, real butter (not the substitutes), and the time it actually
+              deserves.
+            </p>
+            <p>You can expect:</p>
+            <AboutList
+              items={[
+                "Clear product details and ingredient information",
+                "Honest allergen warnings",
+                "Honest lead times",
+                "No pretending butter is the villain",
+                "No custom 'make it healthy' recipe changes",
+                "Small-batch homemade bakes with personality",
+              ]}
+            />
+            <p className="mt-4 rounded-lg border-l-4 border-border-focus bg-bg-card p-5 text-text-primary shadow-sm">
+              <strong>Please note:</strong> Products are made in a home kitchen
+              that handles common allergens including gluten, dairy, eggs,
+              peanuts, oats, and other ingredients. If you have a severe
+              allergy, please read the product information carefully before
+              ordering.
+            </p>
+          </AboutSection>
+
+          <AboutSection title="A Note From Me">
+            <p>
+              Baked with Feelings is exactly what the name says. At any given
+              moment, I'm feeling a lot. Sometimes it's joy. Sometimes it's
+              frustration. Sometimes it's nostalgia or comfort or the need to
+              process something heavy.
+            </p>
+            <p>
+              But what makes this real is that I don't ignore those feelings
+              when I bake. I channel them. I pour them in. I beat the dough with
+              intention, contemplate life while watching cookies bake, and
+              create something that becomes more than just food—it becomes proof
+              that something good can come from hard feelings.
+            </p>
+            <p>
+              My dream isn't to become the next big bakery. My dream is to have
+              people taste comfort; whether that's the cinnamon snickerdoodles
+              their grandma made, or the ones their grandma never got the chance
+              to bake.
+            </p>
+
             <p className="font-script text-3xl leading-tight text-text-brand">
               Because homemade just hits different.
             </p>

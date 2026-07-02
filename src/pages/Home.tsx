@@ -5,10 +5,9 @@ import { BsCheck2Circle, BsHeart, BsSend } from "react-icons/bs";
 
 const PET_TREATS = [
   "Dog biscuits",
-  "Pupcakes",
-  "Birthday cakes",
   "Training treats",
-  "Cat treats",
+  "Peanut Butter Pupcakes",
+  "Savory Chicken Birthday Cake"
 ] as const;
 
 const HERO_IMAGES = [
@@ -59,9 +58,7 @@ export default function HomePage() {
             </p>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg md:text-xl">
-              Small-batch bakes made with real butter, real sugar, and real
-              comfort. No trendy health desserts. Just homemade treats that feel
-              familiar, warm, and worth ordering.
+              Homemade bakes made fresh, delicious and make you ask for net nog n stukkie 
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -80,17 +77,6 @@ export default function HomePage() {
               </NavLink>
             </div>
 
-            <div className="mx-auto mt-8 flex max-w-2xl flex-col gap-2 text-sm font-semibold text-text-primary sm:grid sm:grid-cols-3">
-              <p className="rounded-lg border border-border-subtle bg-bg-elevated/80 px-4 py-3 shadow-sm">
-                Small-batch
-              </p>
-              <p className="rounded-lg border border-border-subtle bg-bg-elevated/80 px-4 py-3 shadow-sm">
-                Made to order
-              </p>
-              <p className="rounded-lg border border-border-subtle bg-bg-elevated/80 px-4 py-3 shadow-sm">
-                Collection only
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -102,7 +88,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col gap-4 text-lg leading-relaxed opacity-90 md:text-xl">
             <p>
-              Some days need cookies. Some days need lemon meringue. Some days
+              Some days need cookies. Some days need cinnamon rolls or brownies. Some days
               need something sweet because being a person is frankly a lot.
             </p>
           </div>
@@ -198,13 +184,13 @@ export default function HomePage() {
                   ))}
                 </ul>
               </div>
-              <div className="shrink-0 md:border-l md:border-border-subtle md:pl-8">
+              {/* <div className="shrink-0 md:border-l md:border-border-subtle md:pl-8">
                 <NavLink to="/menu" className="block">
                   <Button className="w-full px-8 py-3 text-base md:w-auto">
                     See Pet Bakes
                   </Button>
                 </NavLink>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

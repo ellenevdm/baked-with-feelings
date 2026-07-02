@@ -8,23 +8,9 @@ export default function AboutPage() {
         title="Homemade just hits different."
       />
 
-      
-
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div className="space-y-12">
-        <section className="rounded-lg border border-border-subtle bg-bg-card px-4 py-3 text-sm font-medium text-text-primary shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
-          <p className="text-center text-lg leading-8 text-text-primary">
-            Baked with Feelings exists to share fresh, homemade comfort food
-            that tastes like <em>home</em>, <em>nostalgia</em>, and{" "}
-            <em>warmth</em>.
-          </p>
-          <p className="mt-4 text-center text-base text-text-secondary">
-            Not factory-perfect. Not soulless. Just real baking made with care,
-            quality ingredients, and whatever feelings I'm carrying that day.
-          </p>
-        </div>
-      </section>
+        
 
           <AboutSection title="The story behind it">
             <p>
@@ -34,17 +20,17 @@ export default function AboutPage() {
               entirely: baking.
             </p>
             <p>
-              Baking became my outlet—the one thing that made me feel capable,
+              Baking became my outlet, the one thing that made me feel capable,
               proud, and genuinely better. As a child, I baked with my mom. Our
               chocolate birthday cake never looked pretty, but that was never
-              the point. I learned early that what's inside—the care, the real
-              ingredients, the intention—matters infinitely more than what's on
+              the point. I learned early that what's inside, the care, the real
+              ingredients, the intention, matters infinitely more than what's on
               the surface.
             </p>
             <p>
               When life got heavy, I created. I'd spend time tempering butter,
               weighing ingredients, waiting. That deliberate slowness
-              transformed my anxiety into something I could taste—something
+              transformed my anxiety into something I could taste, something
               real. My favorite moments were watching my husband's face as he
               bit into a cookie, or catching my own reflection in the oven glass
               doing a little happy dance because it actually tasted{" "}
@@ -79,7 +65,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-sm leading-6 text-text-secondary">
                   Every batch carries intention. Frustration, joy, nostalgia,
-                  mindfulness—all of it goes in. When life gets heavy, I create
+                  mindfulness, all of it goes in. When life gets heavy, I create
                   a heavy batch with those feelings. That's what makes it real.
                 </p>
               </div>
@@ -97,38 +83,7 @@ export default function AboutPage() {
             </div>
           </AboutSection>
 
-          <AboutSection title="What I Make">
-            <p>
-              Baked with Feelings focuses on comforting homemade bakes made with
-              real ingredients and real time. Fresh donuts and cinnamon rolls.
-              Lemon meringue tarts. Thick, wobbly milk tarts that taste like
-              home. Cinnamon snickerdoodles. Cookies that taste like they were
-              made by someone who actually cared.
-            </p>
-            <p>
-              The launch menu is intentionally small, because I would rather
-              make a few things properly than pretend I'm a full bakery running
-              on caffeine and denial.
-            </p>
-            <p>You can expect:</p>
-            <AboutList
-              items={[
-                "Cinnamon snickerdoodles",
-                "Soft peanut butter oatmeal cookies",
-                "Rich chocolate chip cookies",
-                "Buttery shortbread",
-                "Oatmeal crunchies",
-                "Lemon meringue tarts",
-                "South African milk tarts (thick & wobbly)",
-                "Fresh cinnamon rolls",
-                "Warm homemade donuts",
-              ]}
-            />
-            <p className="mt-4 text-sm text-text-secondary italic">
-              More products will be added as recipes are tested properly. No
-              rushing. No shortcuts.
-            </p>
-          </AboutSection>
+        
 
           <AboutSection title="For Our Four-Legged Family">
             <p>
@@ -137,7 +92,7 @@ export default function AboutPage() {
               pitbull), Mr. Grey, and Tabs (3-year-old cats).
             </p>
             <p>
-              I started baking treats for Luna as a puppy—healthy, gut-friendly
+              I started baking treats for Luna as a puppy: healthy, gut-friendly
               chicken liver treats for her sensitive stomach. What began as a
               solution became a joy, especially when we added Lily and needed
               treats for training. Now they're part of the Baked with Feelings
@@ -157,7 +112,7 @@ export default function AboutPage() {
               </strong>
             </p>
             <p className="mt-4 text-sm text-text-secondary italic">
-              Pet treats are made with pet-safe ingredients, no dairy, and with
+              Pet treats are made with pet-safe ingredients, and with
               the understanding that a healthy pet is a happy pet.
             </p>
           </AboutSection>
@@ -179,10 +134,8 @@ export default function AboutPage() {
               items={[
                 "Clear product details and ingredient information",
                 "Honest allergen warnings",
-                "Honest lead times",
                 "No pretending butter is the villain",
-                "No custom 'make it healthy' recipe changes",
-                "Small-batch homemade bakes with personality",
+                "Bakes made freshly (no stale 2 week old stuff)"
               ]}
             />
             <p className="mt-4 rounded-lg border-l-4 border-border-focus bg-bg-card p-5 text-text-primary shadow-sm">

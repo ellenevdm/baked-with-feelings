@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { products, type Product, type ProductCategory } from "../data/products";
-import { ProductModal, type AddToCartItem } from "../components/products/ProductModal";
 import { ProductCard } from "../components/products/ProductCard";
-import { useOrder } from "../context/useOrder";
 import { PageHeader } from "../components/layout/PageHeader";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -23,33 +21,32 @@ const CATEGORY_SECTIONS: {
     title: "Comfort Bakes",
     description: "Brownies, rolls, scones, and other mood-improving baked things.",
   },
-  {
-    id: "desserts",
-    title: "Desserts",
-    description: "Sweet, nostalgic desserts for when subtlety is not the brief.",
-  },
-  {
-    id: "tarts",
-    title: "Tarts",
-    description: "Classic tart-style bakes for proper table moments.",
-  },
+  // {
+  //   id: "desserts",
+  //   title: "Desserts",
+  //   description: "Sweet, nostalgic desserts for when subtlety is not the brief.",
+  // },
+  // {
+  //   id: "tarts",
+  //   title: "Tarts",
+  //   description: "Classic tart-style bakes for proper table moments.",
+  // },
   {
     id: "pet-bakes",
     title: "Pet Bakes",
     description:
       "Homemade pet-safe treats and celebration bakes for the pets who clearly run the house.",
   },
-  {
-    id: "extras",
-    title: "Extras",
-    description: "Helpful add-ons for making dessert feel complete.",
-  },
+  // {
+  //   id: "extras",
+  //   title: "Extras",
+  //   description: "Helpful add-ons for making dessert feel complete.",
+  // },
 ];
 
 export default function MenuPage() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("all");
-  const { addItem, openSidebar } = useOrder();
 
   const activeProductsByCategory = CATEGORY_SECTIONS.map((section) => ({
     ...section,
@@ -86,17 +83,12 @@ export default function MenuPage() {
     })),
   ];
 
-  function handleAddToCart(item: AddToCartItem) {
-    addItem(item);
-    openSidebar();
-  }
 
   return (
     <div>
-      <PageHeader eyebrow="Everything we make" title="Menu & Shop">
+      <PageHeader eyebrow="Everything we make" title="Menu & Product Info">
         <p>
-          Browse everything we bake. Add what you want to your order. We'll sort
-          the rest via WhatsApp.
+          Browse everything we bake. View all information regarding ingredients, allergens and storage instructions. Then click Order when you are ready
         </p>
       </PageHeader>
 
@@ -120,12 +112,6 @@ export default function MenuPage() {
         </div>
       </div>
 
-      <ProductModal
-        product={selectedProduct}
-        isOpen={selectedProduct !== null}
-        onClose={() => setSelectedProduct(null)}
-        onAddToCart={handleAddToCart}
-      />
     </div>
   );
 }
@@ -249,7 +235,7 @@ function MenuSection({
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
         {products.map((product) => (
           <ProductCard
             key={product.id}

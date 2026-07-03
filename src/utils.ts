@@ -1,18 +1,16 @@
-import type { BuyingOption } from "./data/products";
 
-export function getEffectivePrice(option: BuyingOption): number {
-    if (
-      typeof option.salePrice === "number" &&
-      option.salePrice > 0 &&
-      option.salePrice < option.price
-    ) {
-      return option.salePrice;
-    }
-   
-    return option.price;
+import type { PricingOption } from "./data/products";
+
+
+
+export function getPrice(option: PricingOption, type: string){
+  if(type = "launch"){
+    return option.launchPrice
   }
-   
-  /** True when an option currently has a valid, active sale price. */
-  export function isOnSale(option: BuyingOption): boolean {
-    return getEffectivePrice(option) < option.price;
+  if(type = "sale"){
+    return option.salePrice
   }
+  return null
+}
+
+

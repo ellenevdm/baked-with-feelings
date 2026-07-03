@@ -81,9 +81,21 @@
 
 
 import { type Product } from "../../data/products";
-import { getEffectivePrice, isOnSale } from "../../utils";
-import { Button } from "../ui/Button";
+import { getPrice } from "../../utils";
+
 import { ProductIllustration } from "./ProductIllustration";
+
+function getPricingOptions(product: Product) {
+  return product.pricingOptions.map((option) => {
+    return {
+      id: option.id,
+      label: option.label,
+      price: getPrice(option, "launch") ?? 0,
+      quantity: option.quantity,
+      quantityLabel: option.type,
+    };
+  });
+}
 
 type ProductCardProps = {
   product: Product;
@@ -91,18 +103,11 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ product, onViewOptions }: ProductCardProps) {
-  const cheapestOption = product.buyingOptions.reduce((cheapest, option) => {
-    return getEffectivePrice(option) < getEffectivePrice(cheapest)
-      ? option
-      : cheapest;
-  }, product.buyingOptions[0]);
-
-  const cheapestOptionOnSale = isOnSale(cheapestOption);
 
   const categoryLabel = product.category
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+    .join(" "); 
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-border-subtle bg-bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -122,17 +127,13 @@ export function ProductCard({ product, onViewOptions }: ProductCardProps) {
             {categoryLabel}
           </span>
 
-          {product.featured && (
+          {product.favourite && (
             <span className="rounded-full bg-action-accent px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-action-accent-text">
-              Featured
+              Favourite
             </span>
           )}
 
-          {cheapestOptionOnSale && (
-            <span className="rounded-full bg-rose-900 px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-white">
-              Sale
-            </span>
-          )}
+
         </div>
       </div>
 
@@ -145,40 +146,71 @@ export function ProductCard({ product, onViewOptions }: ProductCardProps) {
           <p className="mt-2 line-clamp-3 font-body text-sm leading-6 text-text-secondary">
             {product.shortDescription}
           </p>
-        </div>
 
-        <div className="mt-auto space-y-4">
-          <div className="rounded-lg border border-border-subtle bg-bg-elevated/50 p-4">
-            {cheapestOptionOnSale ? (
-              <p className="font-body text-sm font-semibold text-text-primary">
-                From{" "}
-                <span className="mr-1.5 text-text-secondary line-through">
-                  R{cheapestOption.price}
-                </span>
-                <span className="text-rose-800">
-                  R{getEffectivePrice(cheapestOption)}
-                </span>
-              </p>
-            ) : (
-              <p className="font-body text-sm font-semibold text-text-primary">
-                From R{cheapestOption.price}
-              </p>
-            )}
+          <div className="mt-6 space-y-4 border-t border-border-subtle pt-5">
+              <ProductDetailBlock title="Ingredients">
+                {product.ingredients}
+              </ProductDetailBlock>
 
-            <p className="mt-1 font-body text-sm text-text-secondary">
-              {cheapestOption.quantityLabel}
-            </p>
-          </div>
+              <ProductDetailBlock title="Allergens">
+                {product.allergens.join(", ")}
+              </ProductDetailBlock>
 
-          <Button
-            type="button"
-            onClick={() => onViewOptions(product)}
-            className="w-full px-5 py-3"
-          >
-            View Options
-          </Button>
+              <ProductDetailBlock title="Storage">
+                {product.storage}
+              </ProductDetailBlock>
+
+              <ProductDetailBlock title="Pricing">
+                <div className="flex flex-col gap-2">
+                {getPricingOptions(product).map((option) => (
+                  <div key={option.id} className="flex items-center justify-between gap-4 px-4 py-2 bg-bg-page rounded-lg">
+                    <div className="flex flex-col">
+                      <span className="font-body text-sm font-semibold text-text-primary">
+                        {option.label}
+                      </span>
+                      <span className="font-body text-sm text-text-secondary">
+                        {option.quantity} {option.quantityLabel}
+                      </span>
+                    </div>
+                    <span className="font-body text-sm font-semibold text-text-secondary">
+                      R{option.price.toFixed(2)}
+                    </span>
+                  </div>
+                ))}
+                </div>
+              </ProductDetailBlock>
+
+            </div>
         </div>
       </div>
     </article>
   );
 }
+
+type ProductDetailBlockProps = {
+  title: string;
+  children: React.ReactNode;
+};
+
+function ProductDetailBlock({ title, children }: ProductDetailBlockProps) {
+  return (
+    <div>
+      <h4 className="font-body text-sm font-semibold uppercase tracking-[0.12em] text-text-brand">
+        {title}
+      </h4>
+
+      <p className="mt-1 font-body text-sm leading-6 text-text-secondary">
+        {children}
+      </p>
+    </div>
+  );
+}
+
+function formatCategoryLabel(category: string) {
+  return category
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+

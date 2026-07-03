@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBars, FaShoppingBag, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { HEADER_LINKS } from "../../data/links";
-import { Button } from "../ui/Button";
-import { useOrder } from "../../context/useOrder";
+import { getButtonClassName } from "../ui/Button";
+
+const ORDER_FORM_URL = "https://form.jotform.com/261722650204044";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { itemCount, openSidebar } = useOrder();
 
   function closeMenu() {
     setIsMenuOpen(false);
@@ -45,39 +45,22 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <NavLink to="/menu">
-            <Button className="px-4 py-2 sm:px-5 sm:py-2.5">Order</Button>
-          </NavLink>
-
-          <button
-            type="button"
-            className="relative inline-flex size-10 items-center justify-center rounded-lg border border-border-subtle bg-bg-card text-text-primary shadow-sm transition hover:border-border-focus hover:text-text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
-            aria-label={`Open shopping bag with ${itemCount} items`}
-            onClick={openSidebar}
-          >
-            <FaShoppingBag className="size-4" aria-hidden />
-            {itemCount > 0 && (
-              <span className="absolute -right-2 -top-2 flex min-w-5 items-center justify-center rounded-full bg-action-primary px-1.5 text-xs font-bold leading-5 text-action-primary-text">
-                {itemCount}
-              </span>
-            )}
-          </button>
+        <a
+              href={ORDER_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className={getButtonClassName(
+                "primary",
+                "mt-2 w-full px-4 py-3",
+              )}
+            >
+              Order
+            </a>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            type="button"
-            className="relative inline-flex size-10 items-center justify-center rounded-lg border border-border-subtle bg-bg-card text-text-primary shadow-sm transition hover:border-border-focus hover:text-text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
-            aria-label={`Open shopping bag with ${itemCount} items`}
-            onClick={openSidebar}
-          >
-            <FaShoppingBag className="size-4" aria-hidden />
-            {itemCount > 0 && (
-              <span className="absolute -right-2 -top-2 flex min-w-5 items-center justify-center rounded-full bg-action-primary px-1.5 text-xs font-bold leading-5 text-action-primary-text">
-                {itemCount}
-              </span>
-            )}
-          </button>
+        
 
           <button
             type="button"
@@ -121,9 +104,18 @@ export default function Header() {
               </NavLink>
             ))}
 
-            <NavLink to="/menu" onClick={closeMenu} className="mt-2">
-              <Button className="w-full px-4 py-3">Order</Button>
-            </NavLink>
+            <a
+              href={ORDER_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className={getButtonClassName(
+                "primary",
+                "mt-2 w-full px-4 py-3",
+              )}
+            >
+              Order
+            </a>
           </div>
         </nav>
       )}

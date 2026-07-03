@@ -35,6 +35,24 @@ function cn(...classes: (string | false | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+export function getButtonClassName(
+  variant: ButtonVariant = "primary",
+  className?: string,
+) {
+  const isIconOnly = variant === "icon";
+
+  return cn(
+    "inline-flex items-center justify-center font-semibold transition",
+    "rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus",
+    "disabled:cursor-not-allowed disabled:opacity-50",
+    isIconOnly
+      ? "size-10 rounded-full p-0"
+      : "min-h-11 gap-2 px-5 py-2.5 text-sm",
+    variantStyles[variant],
+    className,
+  );
+}
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(
     {
@@ -68,16 +86,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         type={type}
-        className={cn(
-          "inline-flex items-center justify-center font-semibold transition",
-          "rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus",
-          "disabled:cursor-not-allowed disabled:opacity-50",
-          isIconOnly
-            ? "size-10 rounded-full p-0"
-            : "min-h-11 gap-2 px-5 py-2.5 text-sm",
-          variantStyles[variant],
-          className,
-        )}
+        className={getButtonClassName(variant, className)}
         {...props}
       >
         {hasIcon && iconPosition === "left" && iconElement}

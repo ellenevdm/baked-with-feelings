@@ -394,7 +394,7 @@ export const products: Product[] = [
       "Room temperature in an airtight container for 2 days. Warm slightly before eating.",
     status: "active",
     favourite: false,
-    image: null,
+    image: '/product-images/cinnamon-rolls.jpeg',
   },
   {
     id: "liver-training-treats",

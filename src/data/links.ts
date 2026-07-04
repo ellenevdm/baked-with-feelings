@@ -4,6 +4,8 @@ import {
   buildWhatsappLink,
 } from "./contact";
 
+export const ORDER_FORM_URL = "https://form.jotform.com/261722650204044";
+
 export const HEADER_LINKS = [
     {
         label: 'Home',

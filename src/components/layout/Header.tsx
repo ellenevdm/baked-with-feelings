@@ -2,9 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { HEADER_LINKS } from "../../data/links";
-import { getButtonClassName } from "../ui/Button";
-
-const ORDER_FORM_URL = "https://form.jotform.com/261722650204044";
+import { OrderCta } from "./OrderCta";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-bg-page/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-5 px-4 py-2.5 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-5 sm:px-6">
         <NavLink to="/" aria-label="Baked With Feelings home">
           <img
             src="/LogoNoSlogan.svg"
@@ -44,28 +42,19 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
-        <a
-              href={ORDER_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
-              className={getButtonClassName(
-                "primary",
-                "mt-2 w-full px-4 py-3",
-              )}
-            >
-              Order
-            </a>
-        </div>
+        <div className="flex items-center gap-2 sm:gap-3">
 
-        <div className="flex items-center gap-2 md:hidden">
-        
+          <OrderCta
+            className="inline-flex px-3 py-2 text-sm md:hidden"
+            onClick={closeMenu}
+          />
 
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-lg border border-border-subtle bg-bg-card text-text-primary shadow-sm transition hover:border-border-focus hover:text-text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus"
-            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            className="inline-flex size-10 items-center justify-center rounded-lg border border-border-subtle bg-bg-card text-text-primary shadow-sm transition hover:border-border-focus hover:text-text-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-border-focus md:hidden"
+            aria-label={
+              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             aria-controls="mobile-navigation"
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((current) => !current)}
@@ -104,18 +93,10 @@ export default function Header() {
               </NavLink>
             ))}
 
-            <a
-              href={ORDER_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <OrderCta
+              className="mt-2 w-full px-4 py-3"
               onClick={closeMenu}
-              className={getButtonClassName(
-                "primary",
-                "mt-2 w-full px-4 py-3",
-              )}
-            >
-              Order
-            </a>
+            />
           </div>
         </nav>
       )}

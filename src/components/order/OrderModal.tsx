@@ -11,7 +11,7 @@ export function OrderModal({ isOpen, onClose }: OrderModalProps) {
         return null
     }
     return (
-      <OrderModalContent isOpen={isOpen} onClose={onClose} />
+      <OrderModalContent onClose={onClose} />
 
     )
 
@@ -19,11 +19,10 @@ export function OrderModal({ isOpen, onClose }: OrderModalProps) {
 
 
 type OrderModalContentProps = {
-  isOpen: boolean;
   onClose: () => void;
 };
 
-function OrderModalContent({ isOpen, onClose }: OrderModalContentProps) {
+function OrderModalContent({ onClose }: OrderModalContentProps) {
 
   useEffect(() => {
     function handleEscape(event: KeyboardEvent) {

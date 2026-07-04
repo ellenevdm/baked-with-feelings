@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { FaPaw } from "react-icons/fa";
 import { BsCheck2Circle, BsHeart, BsSend } from "react-icons/bs";
-import { OrderCta } from "../components/layout/OrderCta";
 import { ORDER_FORM_URL } from "../data/links";
 
 const PET_TREATS = [

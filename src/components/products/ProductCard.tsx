@@ -86,7 +86,7 @@ import { getPrice } from "../../utils";
 import { ProductIllustration } from "./ProductIllustration";
 
 function getPricingOptions(product: Product) {
-  return product.pricingOptions.map((option) => {
+  return (product.pricingOptions ?? []).map((option) => {
     return {
       id: option.id,
       label: option.label,
@@ -99,10 +99,9 @@ function getPricingOptions(product: Product) {
 
 type ProductCardProps = {
   product: Product;
-  onViewOptions: (product: Product) => void;
 };
 
-export function ProductCard({ product, onViewOptions }: ProductCardProps) {
+export function ProductCard({ product }: ProductCardProps) {
 
   const categoryLabel = product.category
     .split("-")
@@ -205,12 +204,4 @@ function ProductDetailBlock({ title, children }: ProductDetailBlockProps) {
     </div>
   );
 }
-
-function formatCategoryLabel(category: string) {
-  return category
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
 

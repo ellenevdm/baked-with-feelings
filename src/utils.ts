@@ -3,14 +3,16 @@ import type { PricingOption } from "./data/products";
 
 
 
-export function getPrice(option: PricingOption, type: string){
-  if(type = "launch"){
-    return option.launchPrice
+export type PriceType = "launch" | "sale" | "normal";
+
+export function getPrice(option: PricingOption, priceType: PriceType) {
+  if (priceType === "launch") {
+    return option.launchPrice;
   }
-  if(type = "sale"){
-    return option.salePrice
+  if (priceType === "sale") {
+    return option.salePrice;
   }
-  return null
+  return option.normalPrice;
 }
 
 

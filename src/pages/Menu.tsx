@@ -45,7 +45,6 @@ const CATEGORY_SECTIONS: {
 ];
 
 export default function MenuPage() {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("all");
 
   const activeProductsByCategory = CATEGORY_SECTIONS.map((section) => ({
@@ -106,7 +105,6 @@ export default function MenuPage() {
               description={section.description}
               products={section.products}
               title={section.title}
-              onViewOptions={setSelectedProduct}
             />
           ))}
         </div>
@@ -215,12 +213,10 @@ function CategoryNav({
 
 function MenuSection({
   description,
-  onViewOptions,
   products,
   title,
 }: {
   description: string;
-  onViewOptions: (product: Product) => void;
   products: Product[];
   title: string;
 }) {
@@ -240,7 +236,6 @@ function MenuSection({
           <ProductCard
             key={product.id}
             product={product}
-            onViewOptions={onViewOptions}
           />
         ))}
       </div>

@@ -45,7 +45,7 @@ export default function Header() {
         <div className="flex items-center gap-2 sm:gap-3">
 
           <OrderCta
-            className="inline-flex px-3 py-2 text-sm md:hidden"
+            className="inline-flex px-3 py-2 text-sm"
             onClick={closeMenu}
           />
 

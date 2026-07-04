@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { FaPaw } from "react-icons/fa";
 import { BsCheck2Circle, BsHeart, BsSend } from "react-icons/bs";
+import { OrderCta } from "../components/layout/OrderCta";
+import { ORDER_FORM_URL } from "../data/links";
 
 const PET_TREATS = [
-  "Dog biscuits",
+  "Peanut butter Carrot Dog biscuits",
   "Training treats",
-  "Peanut Butter Pupcakes",
-  "Savory Chicken Birthday Cake"
 ] as const;
 
 const HERO_IMAGES = [
@@ -58,25 +58,29 @@ export default function HomePage() {
             </p>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg md:text-xl">
-              Homemade bakes made fresh, delicious and make you ask for net nog n stukkie 
+              Homemade bakes made fresh, delicious and make you ask for net nog
+              n stukkie
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <NavLink to="/menu">
+              <a   href={ORDER_FORM_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+ 
+      aria-label="Order online (opens in new tab)">
                 <Button className="w-full px-7 py-3 text-base sm:w-auto">
-                  See the Menu
+                  Make an Order
                 </Button>
-              </NavLink>
-              <NavLink to="/about">
+              </a>
+              <NavLink to="/menu">
                 <Button
                   variant="secondary"
                   className="w-full px-7 py-3 text-base sm:w-auto"
                 >
-                  Our Story
+                  View the Menu
                 </Button>
               </NavLink>
             </div>
-
           </div>
         </div>
       </section>
@@ -88,8 +92,9 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col gap-4 text-lg leading-relaxed opacity-90 md:text-xl">
             <p>
-              Some days need cookies. Some days need cinnamon rolls or brownies. Some days
-              need something sweet because being a person is frankly a lot.
+              Some days need cookies. Some days need cinnamon rolls or brownies.
+              Some days need something sweet because being a person is frankly a
+              lot.
             </p>
           </div>
         </div>
@@ -107,12 +112,15 @@ export default function HomePage() {
                 <BsHeart className="size-7 text-text-inverse" />
               </div>
               <h3 className="mb-2 font-heading text-xl text-text-primary">
-                1. Browse & Choose
+                1. View Product Info
               </h3>
               <p className="text-sm leading-6 text-text-secondary">
-                Explore our menu and add your favorite treats to your cart.
-                Check ingredients and allergen info for each product.
+                Explore our menu and check ingredients and allergen info for
+                each product.
               </p>
+              <NavLink to="/menu">
+                <span className="font-bold underline">Visit Menu</span>
+              </NavLink>
             </div>
 
             <div className="rounded-lg border border-border-subtle bg-bg-card p-6 text-center shadow-sm">
@@ -123,9 +131,19 @@ export default function HomePage() {
                 2. Send Your Order
               </h3>
               <p className="text-sm leading-6 text-text-secondary">
-                Submit your order through the website. We'll receive it and
-                contact you via WhatsApp to confirm details.
+                Once you're ready click the order button which will redirect you
+                to a form link. Here you can select your products. Complete your
+                order and form and submit.
               </p>
+
+              <a
+                href={ORDER_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Order form link. Opens in new tab"
+              >
+                <span className="font-bold underline">Order Form</span>
+              </a>
             </div>
 
             <div className="rounded-lg border border-border-subtle bg-bg-card p-6 text-center shadow-sm">
@@ -136,8 +154,9 @@ export default function HomePage() {
                 3. Confirm & Collect
               </h3>
               <p className="text-sm leading-6 text-text-secondary">
-                We'll confirm pricing, collection/delivery, and payment. Once
-                confirmed, we'll bake everything fresh for you!
+                We'll confirm your order, collection/delivery, and payment via
+                WhatsApp once we receive your completed form. Once confirmed,
+                we'll bake everything fresh for you!
               </p>
             </div>
           </div>
@@ -147,7 +166,12 @@ export default function HomePage() {
               <strong>Important:</strong> Orders are only confirmed once we've
               spoken to you. Please allow 24-72 hours lead time. Our recipes are
               made as intended; we do not customise to remove allergens, reduce
-              sugar, or emotionally betray the butter.
+              sugar, or emotionally betray the butter. All ingredient info and
+              allergens can be found on{" "}
+              <NavLink to="/menu" className="font-bold underline">
+                our menu
+              </NavLink>
+              .
             </p>
           </div>
         </div>

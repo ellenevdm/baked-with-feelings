@@ -90,7 +90,8 @@ function getPricingOptions(product: Product) {
     return {
       id: option.id,
       label: option.label,
-      price: getPrice(option, "launch") ?? 0,
+      salePrice: getPrice(option, "launch") ?? 0,
+      normalPrice: getPrice(option, "normal") ?? 0,
       quantity: option.quantity,
       quantityLabel: option.type,
     };
@@ -172,7 +173,7 @@ export function ProductCard({ product }: ProductCardProps) {
                       </span>
                     </div>
                     <span className="font-body text-sm font-semibold text-text-secondary">
-                      R{option.price.toFixed(2)}
+                      R{option.salePrice.toFixed(2)}
                     </span>
                   </div>
                 ))}

@@ -64,10 +64,10 @@ export const products: Product[] = [
       {
         id: "small",
         label: "Small Pack",
-        quantity: 8,
+        quantity: 6,
         type: "cookies",
-        normalPrice: 40,
-        launchPrice: 35,
+        normalPrice: 35,
+        launchPrice: 30,
         salePrice: 30,
       },
       
@@ -76,19 +76,19 @@ export const products: Product[] = [
         label:  "Standard Pack",
         quantity: 12,
         type: "cookies",
-        normalPrice: 55,
-        launchPrice: 50,
+        normalPrice: 50,
+        launchPrice: 45,
         salePrice: 45,
       },
       
       {
         id:  "sharing",
-        label: "Sharing Pack",
+        label: "Sharing Box",
         quantity: 24,
         type: "cookies",
-        normalPrice: 100,
-        launchPrice: 90,
-        salePrice: 85,
+        normalPrice: 90,
+        launchPrice: 80,
+        salePrice: 80,
       },
     ],
     storage:
@@ -114,10 +114,10 @@ export const products: Product[] = [
       {
         id: "small",
         label: "Small Pack",
-        quantity: 8,
+        quantity: 6,
         type: "cookies",
-        normalPrice: 40,
-        launchPrice: 35,
+        normalPrice: 35,
+        launchPrice: 30,
         salePrice: 30,
       },
       
@@ -126,19 +126,19 @@ export const products: Product[] = [
         label:  "Standard Pack",
         quantity: 12,
         type: "cookies",
-        normalPrice: 55,
-        launchPrice: 50,
+        normalPrice: 50,
+        launchPrice: 45,
         salePrice: 45,
       },
       
       {
         id:  "sharing",
-        label: "Sharing Pack",
+        label: "Sharing Box",
         quantity: 24,
         type: "cookies",
-        normalPrice: 100,
-        launchPrice: 90,
-        salePrice: 85,
+        normalPrice: 90,
+        launchPrice: 80,
+        salePrice: 80,
       },
     ],
     storage:
@@ -164,10 +164,10 @@ export const products: Product[] = [
       {
         id: "small",
         label: "Small Pack",
-        quantity: 8,
+        quantity: 6,
         type: "cookies",
-        normalPrice: 40,
-        launchPrice: 35,
+        normalPrice: 35,
+        launchPrice: 30,
         salePrice: 30,
       },
       
@@ -176,19 +176,19 @@ export const products: Product[] = [
         label:  "Standard Pack",
         quantity: 12,
         type: "cookies",
-        normalPrice: 55,
-        launchPrice: 50,
+        normalPrice: 50,
+        launchPrice: 45,
         salePrice: 45,
       },
       
       {
         id:  "sharing",
-        label: "Sharing Pack",
+        label: "Sharing Box",
         quantity: 24,
         type: "cookies",
-        normalPrice: 100,
-        launchPrice: 90,
-        salePrice: 85,
+        normalPrice: 90,
+        launchPrice: 80,
+        salePrice: 80,
       },
     ],
     storage:
@@ -213,10 +213,10 @@ export const products: Product[] = [
       {
         id: "small",
         label: "Small Pack",
-        quantity: 8,
+        quantity: 6,
         type: "cookies",
-        normalPrice: 40,
-        launchPrice: 35,
+        normalPrice: 35,
+        launchPrice: 30,
         salePrice: 30,
       },
       
@@ -225,19 +225,19 @@ export const products: Product[] = [
         label:  "Standard Pack",
         quantity: 12,
         type: "cookies",
-        normalPrice: 55,
-        launchPrice: 50,
+        normalPrice: 50,
+        launchPrice: 45,
         salePrice: 45,
       },
       
       {
         id:  "sharing",
-        label: "Sharing Pack",
+        label: "Sharing Box",
         quantity: 24,
         type: "cookies",
-        normalPrice: 100,
-        launchPrice: 90,
-        salePrice: 85,
+        normalPrice: 90,
+        launchPrice: 80,
+        salePrice: 80,
       },
     ],
     storage:
@@ -263,10 +263,10 @@ export const products: Product[] = [
       {
         id: "small",
         label: "Small Pack",
-        quantity: 8,
+        quantity: 6,
         type: "cookies",
-        normalPrice: 40,
-        launchPrice: 35,
+        normalPrice: 35,
+        launchPrice: 30,
         salePrice: 30,
       },
       
@@ -275,19 +275,19 @@ export const products: Product[] = [
         label:  "Standard Pack",
         quantity: 12,
         type: "cookies",
-        normalPrice: 55,
-        launchPrice: 50,
+        normalPrice: 50,
+        launchPrice: 45,
         salePrice: 45,
       },
       
       {
         id:  "sharing",
-        label: "Sharing Pack",
+        label: "Sharing Box",
         quantity: 24,
         type: "cookies",
-        normalPrice: 100,
-        launchPrice: 90,
-        salePrice: 85,
+        normalPrice: 90,
+        launchPrice: 80,
+        salePrice: 80,
       },
     ],
     storage:
@@ -314,9 +314,9 @@ export const products: Product[] = [
         label: "Small Box",
         quantity: 4,
         type: "Brownies",
-        normalPrice: 40,
-        launchPrice: 45,
-        salePrice: 55,
+        normalPrice: 60,
+        launchPrice: 50,
+        salePrice: 50,
       },
       
       {
@@ -324,9 +324,9 @@ export const products: Product[] = [
         label:  "Standard Box",
         quantity: 8,
         type: "brownies",
-        normalPrice: 95,
-        launchPrice: 85,
-        salePrice: 80,
+        normalPrice: 105,
+        launchPrice: 90,
+        salePrice: 90,
       },
       
       {
@@ -334,9 +334,9 @@ export const products: Product[] = [
         label: "Large Box",
         quantity: 12,
         type: "brownies",
-        normalPrice: 135,
-        launchPrice: 125,
-        salePrice: 120,
+        normalPrice: 155,
+        launchPrice: 135,
+        salePrice: 135,
       },
       
     ],
@@ -344,7 +344,7 @@ export const products: Product[] = [
       "Store in an airtight container at room temperature for up to 4 days.",
     status: "active",
     favourite: false,
-    image: null,
+    image: "/product-images/brownies.jpeg",
   },
   {
     id: "cinnamon-rolls",
@@ -365,9 +365,9 @@ export const products: Product[] = [
         label: "Small Box",
         quantity: 4,
         type: "rolls",
-        normalPrice: 80,
-        launchPrice: 70,
-        salePrice: 65,
+        normalPrice: 65,
+        launchPrice: 55,
+        salePrice: 55,
       },
       
       {
@@ -375,9 +375,9 @@ export const products: Product[] = [
         label:  "Standard Box",
         quantity: 8,
         type: "rolls",
-        normalPrice: 140,
-        launchPrice: 125,
-        salePrice: 115,
+        normalPrice: 115,
+        launchPrice: 100,
+        salePrice: 100,
       },
       
       {
@@ -385,9 +385,9 @@ export const products: Product[] = [
         label: "Large Box",
         quantity: 12,
         type: "rolls",
-        normalPrice: 200,
-        launchPrice: 180,
-        salePrice: 170,
+        normalPrice: 165,
+        launchPrice: 145,
+        salePrice: 145,
       },
     ],
     storage:
@@ -395,6 +395,56 @@ export const products: Product[] = [
     status: "active",
     favourite: false,
     image: '/product-images/cinnamon-rolls.jpeg',
+
+  },
+  {
+    id: "fresh-fried-donuts",
+    recipeId: "DONUTS",
+    name: "Fresh Fried Glazed Donuts",
+    audience: "human",
+    category: "comfort-bakes",
+    shortDescription:
+      "Fresh fried donuts. Soft, sweet, and not pretending to be healthy.",
+    description:
+      "Yeast-risen donuts fried fresh and dipped in vanilla glaze. Best eaten warm on the same day.",
+    ingredients:
+      "Bread flour, yeast, butter, eggs, milk, sugar, salt, oil for frying.",
+    allergens: ["Gluten", "Dairy", "Eggs"],
+    pricingOptions: [
+      {
+        id: "small",
+        label: "Small Box",
+        quantity: 4,
+        type: "rolls",
+        normalPrice: 50,
+        launchPrice: 40,
+        salePrice: 40,
+      },
+      
+      {
+        id: "standard",
+        label:  "Standard Box",
+        quantity: 8,
+        type: "rolls",
+        normalPrice: 85,
+        launchPrice: 75,
+        salePrice: 75,
+      },
+      
+      {
+        id:  "large",
+        label: "Large Box",
+        quantity: 12,
+        type: "rolls",
+        normalPrice: 120,
+        launchPrice: 105,
+        salePrice: 105,
+      },
+    ],
+    storage: "Store in airtight container, up to 3 days. Best eaten warm.",
+    status: "active",
+    favourite: false,
+    image: "/product-images/donuts.jpeg",
   },
   {
     id: "liver-training-treats",
@@ -494,25 +544,7 @@ export const products: Product[] = [
     image: "/product-images/pb-carrot-biscuits.jpeg",
   },
 
-  // {
-  //   id: "fresh-fried-donuts",
-  //   recipeId: "DONUTS",
-  //   name: "Fresh Fried Donuts",
-  //   audience: "human",
-  //   category: "comfort-bakes",
-  //   shortDescription:
-  //     "Fresh fried donuts. Soft, sweet, and not pretending to be healthy.",
-  //   description:
-  //     "Yeast-risen donuts fried fresh and rolled in sugar. Best eaten warm on the same day.",
-  //   ingredients:
-  //     "Bread flour, yeast, butter, eggs, milk, sugar, salt, oil for frying.",
-  //   allergens: ["Gluten", "Dairy", "Eggs"],
-  //   pricingOptions: [],
-  //   storage: "Same-day only. Best eaten warm.",
-  //   status: "active",
-  //   favourite: false,
-  //   image: null,
-  // },
+
 ];
 
 export const categories = [

@@ -4,6 +4,7 @@ import {
   BUSINESS_WHATSAPP_DISPLAY,
 } from "../data/contact";
 import { PageHeader } from "../components/layout/PageHeader";
+import { NavLink } from "react-router-dom";
 
 export default function TermsAndConditions() {
   return (
@@ -15,14 +16,16 @@ export default function TermsAndConditions() {
           below.
         </p>
 
-        <p className="mt-4 text-sm text-text-muted">Last updated: 9 June 2026</p>
+        <p className="mt-4 text-sm text-text-muted">
+          Last updated: 9 June 2026
+        </p>
       </PageHeader>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <div className="space-y-10 rounded-lg border border-border-subtle bg-bg-card p-6 shadow-sm md:p-10">
           <TermsSection title="1. Orders">
             <p>
-              Orders can be placed through our website, order form, WhatsApp, or
+              Orders can be placed through our order form, WhatsApp, or email
               any other ordering method we make available.
             </p>
             <p>
@@ -32,7 +35,8 @@ export default function TermsAndConditions() {
             </p>
             <p>
               We may decline or adjust an order if we are fully booked,
-              ingredients are unavailable, or the requested date is not possible.
+              ingredients are unavailable, or the requested date is not
+              possible.
             </p>
           </TermsSection>
 
@@ -53,7 +57,11 @@ export default function TermsAndConditions() {
             </ul>
             <p>
               If a product does not suit your dietary needs, please choose a
-              different item.
+              different item. You can find all ingredient and allergen info on
+              the{" "}
+              <NavLink to="/menu">
+                <span className="font-bold underline">menu</span>
+              </NavLink>
             </p>
           </TermsSection>
 
@@ -108,7 +116,9 @@ export default function TermsAndConditions() {
           </TermsSection>
 
           <TermsSection title="6. Payment">
-            <p>Payment details will be provided when your order is confirmed.</p>
+            <p>
+              Payment details will be provided when your order is confirmed.
+            </p>
             <p>
               Orders may require full payment upfront or a deposit before the
               order is secured.
@@ -118,24 +128,55 @@ export default function TermsAndConditions() {
               be cancelled.
             </p>
           </TermsSection>
-
-          <TermsSection title="7. Cancellations">
+          <TermsSection title="6. Payment">
             <p>
-              Because our products are made to order and ingredients may be
+              Payment details will be provided when your order is confirmed via
+              WhatsApp.
+            </p>
+            <p>
+              We accept Electronic Funds Transfer (EFT) in advance, as well as
+              Cash, SnapScan, or Card (Tap to Pay) upon collection. For orders
+              requiring delivery, full payment must be paid via EFT and proof of
+              payment sent prior to dispatch.
+            </p>
+            <p>
+              Depending on the size or nature of your order, a non-refundable
+              deposit or full payment upfront may be required to secure your
+              booking. If any required upfront payment is not received by the
+              agreed deadline, your order may be cancelled.
+            </p>
+          </TermsSection>
+
+          <TermsSection title="7. Cancellations & No Shows">
+            <p>
+              Because our products are made to order and ingredients are
               purchased in advance, cancellations must be made as early as
               possible.
             </p>
             <ul>
               <li>
-                More than 48 hours before collection/delivery: we may offer a
-                refund, credit, or reschedule, depending on the order.
+                <strong>Orders paid in advance (EFT):</strong> Cancellations
+                made more than 24 hours before collection/delivery may be
+                eligible for a refund, credit, or reschedule, depending on the
+                order. Cancellations made less than 48 hours before the slot are
+                non-refundable, as production will have already commenced.
               </li>
               <li>
-                Less than 48 hours before collection/delivery: refunds are not
-                guaranteed.
+                <strong>
+                  Orders approved for payment on collection (Cash, SnapScan, Tap
+                  to Pay):
+                </strong>
+                If you need to cancel an order that was approved for payment on
+                collection, you must notify us at least 24 hours in advance.
               </li>
-              <li>Same-day cancellations: no refund will usually be given.</li>
-              <li>No-shows: no refund will be given.</li>
+              <li>
+                <strong>Late Cancellations & No-Shows:</strong> If you cancel a
+                "pay on collection" order less than 24 hours before your slot,
+                or fail to show up for your collection without prior
+                arrangement, your ordering privileges will be suspended, and any
+                future order requests will require strict, non-refundable
+                upfront EFT payment.
+              </li>
             </ul>
           </TermsSection>
 
@@ -145,7 +186,8 @@ export default function TermsAndConditions() {
             </p>
             <p>
               Once an order has been collected or delivered, responsibility for
-              storage, handling, transport, and freshness passes to the customer.
+              storage, handling, transport, and freshness passes to the
+              customer.
             </p>
             <p>
               We are not responsible for damage caused after collection or
@@ -177,8 +219,8 @@ export default function TermsAndConditions() {
               the issue, and photos where possible.
             </p>
             <p>
-              Refunds, replacements, or credits are handled at our discretion and
-              depend on the nature of the issue.
+              Refunds, replacements, or credits are handled at our discretion
+              and depend on the nature of the issue.
             </p>
             <p>
               We do not offer refunds for change of mind, dislike of flavour or
@@ -191,7 +233,7 @@ export default function TermsAndConditions() {
           <TermsSection title="11. Personal Information">
             <p>
               When you place an order, we may collect personal information such
-              as your name, phone number, email address, delivery or collection
+              as your name, phone number, delivery or collection
               details, order information, and payment confirmation.
             </p>
             <p>
@@ -199,7 +241,7 @@ export default function TermsAndConditions() {
               your order, arrange collection or delivery, keep basic business
               records, and improve our service.
             </p>
-            <p>We will not sell your personal information.</p>
+            <p>We will not sell or distribute your personal information.</p>
           </TermsSection>
 
           <TermsSection title="12. Website & Menu Information">
@@ -215,7 +257,9 @@ export default function TermsAndConditions() {
           </TermsSection>
 
           <TermsSection title="13. Contact">
-            <p>For questions about these Terms & Conditions, please contact us:</p>
+            <p>
+              For questions about these Terms & Conditions, please contact us:
+            </p>
             <p>
               <strong>Baked with Feelings</strong>
               <br />

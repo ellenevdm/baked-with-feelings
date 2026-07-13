@@ -67,7 +67,7 @@ const FAQS = [
       {
         question: "Can recipes be changed for allergies or diets?",
         answer:
-          "No recipe removals or health swaps are offered unless a product clearly says so. No sugar-free versions. No butter betrayal.",
+          "Every item on our menu includes ingredient and allergen information. If you have allergies or dietary requirements, please check the menu carefully before ordering. Recipes are made as listed and can't be customised or substituted. No sugar-free versions. No butter betrayal.",
       },
     ],
   },
@@ -296,11 +296,11 @@ export default function ContactPage() {
 
           <InfoCard title="Collection & Delivery">
             <p>
-              Orders can be collected from Brackenfell, Cape Town, or delivered
-              within Cape Town Northern Suburbs only. Delivery is available for
-              an additional fee based on your area and is subject to
-              availability. We'll confirm the delivery cost and time when your
-              order is accepted.
+              Orders can be collected from Brackenfell (address will be provided
+              once order is confirmed) , or delivered within Cape Town Northern
+              Suburbs only. Delivery is available for an additional fee based on
+              your area and is subject to availability. We'll confirm the
+              delivery cost and time when your order is accepted.
             </p>
           </InfoCard>
 

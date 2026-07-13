@@ -85,9 +85,9 @@ export default function MenuPage() {
 
   return (
     <div>
-      <PageHeader eyebrow="Everything we make" title="Menu & Product Info">
+      <PageHeader eyebrow="Current Menu" title="Menu & Product Info">
         <p>
-          Browse everything we bake. View all information regarding ingredients, allergens and storage instructions. Then click Order when you are ready
+        Browse our current collection of handmade treats, complete with ingredients, allergens and storage information. New products are added as the bakery grows.
         </p>
       </PageHeader>
 

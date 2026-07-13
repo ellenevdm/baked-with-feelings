@@ -60,17 +60,7 @@ export const products: Product[] = [
     ingredients:
       "Butter, white sugar, eggs, cake flour, baking soda, cream of tartar, salt, cinnamon.",
     allergens: ["Gluten", "Dairy", "Eggs"],
-    pricingOptions: [
-      {
-        id: "small",
-        label: "Small Pack",
-        quantity: 6,
-        type: "cookies",
-        normalPrice: 35,
-        launchPrice: 30,
-        salePrice: 30,
-      },
-      
+    pricingOptions: [     
       {
         id: "standard",
         label:  "Standard Pack",
@@ -111,15 +101,6 @@ export const products: Product[] = [
       "Cake flour, baking soda, corn flour, salt, butter, brown sugar, white sugar, eggs, vanilla, chocolate chips.",
     allergens: ["Gluten", "Dairy", "Eggs"],
     pricingOptions: [
-      {
-        id: "small",
-        label: "Small Pack",
-        quantity: 6,
-        type: "cookies",
-        normalPrice: 35,
-        launchPrice: 30,
-        salePrice: 30,
-      },
       
       {
         id: "standard",
@@ -161,15 +142,6 @@ export const products: Product[] = [
       "Oats, cake flour, baking soda, salt, cinnamon, butter, peanut butter, white sugar, brown sugar, eggs, vanilla.",
     allergens: ["Gluten", "Dairy", "Eggs", "Peanuts", "Oats"],
     pricingOptions: [
-      {
-        id: "small",
-        label: "Small Pack",
-        quantity: 6,
-        type: "cookies",
-        normalPrice: 35,
-        launchPrice: 30,
-        salePrice: 30,
-      },
       
       {
         id: "standard",
@@ -210,15 +182,6 @@ export const products: Product[] = [
     ingredients: "Cake flour, butter, castor sugar, salt.",
     allergens: ["Gluten", "Dairy"],
     pricingOptions: [
-      {
-        id: "small",
-        label: "Small Pack",
-        quantity: 6,
-        type: "cookies",
-        normalPrice: 35,
-        launchPrice: 30,
-        salePrice: 30,
-      },
       
       {
         id: "standard",
@@ -260,15 +223,6 @@ export const products: Product[] = [
       "Cake flour, oats, coconut, butter, brown sugar, golden syrup, baking soda.",
     allergens: ["Gluten", "Dairy", "Oats", "Coconut"],
     pricingOptions: [
-      {
-        id: "small",
-        label: "Small Pack",
-        quantity: 6,
-        type: "cookies",
-        normalPrice: 35,
-        launchPrice: 30,
-        salePrice: 30,
-      },
       
       {
         id: "standard",
@@ -358,7 +312,7 @@ export const products: Product[] = [
       "Soft homemade cinnamon rolls filled with cinnamon sugar and finished with a sweet glaze.",
     ingredients:
       "Bread flour, yeast, butter, milk, eggs, sugar, salt, brown sugar, cinnamon, cream cheese, icing sugar, vanilla.",
-    allergens: ["Gluten", "Dairy", "Eggs"],
+    allergens: ["Gluten", "Dairy", "Eggs", "Cinnamon"],
     pricingOptions: [
       {
         id: "small",
@@ -415,7 +369,7 @@ export const products: Product[] = [
         id: "small",
         label: "Small Box",
         quantity: 4,
-        type: "rolls",
+        type: "donuts",
         normalPrice: 50,
         launchPrice: 40,
         salePrice: 40,
@@ -425,7 +379,7 @@ export const products: Product[] = [
         id: "standard",
         label:  "Standard Box",
         quantity: 8,
-        type: "rolls",
+        type: "donuts",
         normalPrice: 85,
         launchPrice: 75,
         salePrice: 75,
@@ -435,7 +389,7 @@ export const products: Product[] = [
         id:  "large",
         label: "Large Box",
         quantity: 12,
-        type: "rolls",
+        type: "donuts",
         normalPrice: 120,
         launchPrice: 105,
         salePrice: 105,

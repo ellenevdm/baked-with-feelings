@@ -52,7 +52,7 @@ const FAQS = [
       {
         question: "How much notice do you need?",
         answer:
-          "Most orders need 24-72 hours. Bigger or more specific orders may need more time, because butter cannot be bullied into a schedule.",
+          "Most orders require 24–72 hours' notice, depending on the items and current availability. Ordering a little earlier is always appreciated, especially for larger orders.",
       },
     ],
   },
@@ -77,7 +77,7 @@ const FAQS = [
       {
         question: "Do you deliver?",
         answer:
-          "Orders are collection only from Brackenfell, Cape Town, unless something different is confirmed directly with you.",
+          "Yes! Delivery is available within the Northern Suburbs of Cape Town for an additional fee. Collection from Brackenfell is also available. Delivery costs and times are confirmed when your order is accepted.",
       },
       {
         question: "How do payments work?",
@@ -136,8 +136,10 @@ export default function ContactPage() {
         title="Questions, orders, and butter-related admin."
       >
         <p>
-          Choose the route that matches the urgency. Quick question? WhatsApp.
-          More details, bulk orders, or feedback? Send a message from here.
+          Choose the route that matches the urgency. Have a question about an
+          order, delivery area, or availability? WhatsApp is the fastest way to
+          reach me. For detailed enquiries, bulk orders, or feedback, send a
+          message below.
         </p>
       </PageHeader>
 
@@ -152,9 +154,7 @@ export default function ContactPage() {
             <div className="mb-4 inline-flex size-11 items-center justify-center rounded-lg bg-cinnamon-100 text-text-brand">
               <FaWhatsapp className="size-5" aria-hidden />
             </div>
-            <p className="font-heading text-2xl text-text-primary">
-              WhatsApp
-            </p>
+            <p className="font-heading text-2xl text-text-primary">WhatsApp</p>
             <p className="mt-2 text-sm leading-6 text-text-secondary">
               The fast route for simple questions and order confirmation chats.
             </p>
@@ -273,17 +273,34 @@ export default function ContactPage() {
         </form>
 
         <aside className="space-y-4">
-          <InfoCard title="Operating Hours">
-            <p>Monday to Friday: 09:00-17:00</p>
-            <p>Saturday: 09:00-13:00</p>
-            <p>Sunday: Closed for kitchen recovery.</p>
+          <InfoCard title="Ordering & Collections Times">
+            <div className="space-y-3">
+              <div>
+                <p className="font-semibold text-text-primary">Orders</p>
+                <p>Monday–Sunday: Anytime</p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-text-primary">
+                  Collections & Deliveries
+                </p>
+                <p>Wednesday–Saturday (By confirmation)</p>
+              </div>
+
+              <p>
+                Everything is baked fresh to order, so collection and delivery
+                times are arranged when your order is confirmed.
+              </p>
+            </div>
           </InfoCard>
 
-          <InfoCard title="Collection Only">
+          <InfoCard title="Collection & Delivery">
             <p>
-              Orders are collected from {BUSINESS_LOCATION}. Delivery is not
-              part of the standard setup, so please wait for confirmation before
-              planning the handover.
+              Orders can be collected from Brackenfell, Cape Town, or delivered
+              within Cape Town Northern Suburbs only. Delivery is available for
+              an additional fee based on your area and is subject to
+              availability. We'll confirm the delivery cost and time when your
+              order is accepted.
             </p>
           </InfoCard>
 
@@ -315,6 +332,10 @@ export default function ContactPage() {
             <p className="inline-flex items-center gap-2">
               <FaMapMarkerAlt className="text-text-brand" aria-hidden />
               {BUSINESS_LOCATION}
+            </p>
+            <p className="inline-flex items-center gap-2">
+              <FaMapMarkerAlt className="text-text-brand" aria-hidden />
+              Delivery Cape Town Northern Suburbs
             </p>
           </InfoCard>
         </aside>
@@ -412,27 +433,32 @@ async function sendContactEmail(
   emailBody: string,
 ) {
   try {
-    const response = await fetch(`https://formsubmit.co/ajax/${BUSINESS_EMAIL}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+    const response = await fetch(
+      `https://formsubmit.co/ajax/${BUSINESS_EMAIL}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: details.topic || "Website enquiry from Baked with Feelings",
+          _template: "table",
+          _captcha: "false",
+          name: details.name,
+          email: details.email,
+          phone: details.phone || "Not provided",
+          topic: details.topic || "General enquiry",
+          message: emailBody,
+        }),
       },
-      body: JSON.stringify({
-        _subject: details.topic || "Website enquiry from Baked with Feelings",
-        _template: "table",
-        _captcha: "false",
-        name: details.name,
-        email: details.email,
-        phone: details.phone || "Not provided",
-        topic: details.topic || "General enquiry",
-        message: emailBody,
-      }),
-    });
+    );
 
     if (response.ok) return "sent" as const;
 
-    return response.status === 422 ? ("fallback" as const) : ("failed" as const);
+    return response.status === 422
+      ? ("fallback" as const)
+      : ("failed" as const);
   } catch {
     return "failed" as const;
   }

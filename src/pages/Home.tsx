@@ -57,16 +57,18 @@ export default function HomePage() {
             </p>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg md:text-xl">
-              Homemade bakes made fresh, delicious and make you ask for net nog
-              n stukkie
+              A small home bakery baking homemade cookies, brownies, cinnamon rolls and comfort bakes made
+              fresh to order in Cape Town Northern Suburbs. We also make wholesome homemade dog
+              treats because pets deserve homemade too.
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <a   href={ORDER_FORM_URL}
-      target="_blank"
-      rel="noopener noreferrer"
- 
-      aria-label="Order online (opens in new tab)">
+              <a
+                href={ORDER_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Order online (opens in new tab)"
+              >
                 <Button className="w-full px-7 py-3 text-base sm:w-auto">
                   Make an Order
                 </Button>

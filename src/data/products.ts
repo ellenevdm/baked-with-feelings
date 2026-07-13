@@ -124,7 +124,7 @@ export const products: Product[] = [
     ],
     storage:
       "Store in an airtight container at room temperature for up to 5 days.",
-    status: "hidden",
+    status: "active",
     favourite: false,
     image: "/product-images/choc-chip-cookies.jpeg",
   },
